@@ -1,0 +1,108 @@
+.coffee-menu {
+  margin: 20px auto 80px;
+  min-height: 70vh;
+  padding-inline: 10px;
+}
+.coffee-menu .category {
+  position: sticky;
+  top: 0px;
+  left: 0;
+  margin: 40px auto 25px;
+  width: 100%;
+  padding-top: 8px;
+  z-index: 10;
+  background: var(--background-color);
+}
+.coffee-menu .category .scroll-btn {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  position: absolute;
+  color: white;
+  background: var(--primery-color);
+  padding: 5px;
+  border-radius: 50%;
+  border: 1.2px solid var(--primery-color);
+  top: 45%;
+  z-index: 10;
+  display: none;
+}
+@media screen and (max-width: 860px) {
+  .coffee-menu .category .scroll-btn {
+    display: block;
+  }
+}
+.coffee-menu .category .left-btn {
+  left: 0;
+  transform: translateY(-50%) rotate(180deg);
+}
+.coffee-menu .category .right-btn {
+  right: 0;
+  transform: translateY(-50%);
+}
+.coffee-menu .category .category-content {
+  scroll-behavior: smooth;
+  width: calc(100% - 90px);
+  margin-inline: auto;
+  display: block;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+}
+.coffee-menu .category .category-content::-webkit-scrollbar {
+  display: none;
+}
+.coffee-menu .category .category-content button {
+  white-space: nowrap;
+  flex-grow: 1;
+  margin: 7px;
+  padding: 7px 22px;
+  background: var(--secondry-color);
+  color: var(--primery-color);
+  border: 0;
+  border-radius: 7px;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: 0.5s ease-out;
+}
+.coffee-menu .category .category-content button.active {
+  color: white;
+  background: var(--primery-color);
+}
+.coffee-menu .category .category-content::-webkit-scrollbar {
+  height: 5px;
+}
+.coffee-menu .category .category-content:nth-last-of-type(1) {
+  padding-top: 10px;
+  justify-content: center;
+}
+.coffee-menu .category .category-content:nth-last-of-type(1) button {
+  max-width: 100px;
+}
+.coffee-menu .box-content {
+  width: 95%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px 10px;
+}
+@media screen and (max-width: 1300px) {
+  .coffee-menu .box-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 801px) {
+  .coffee-menu .box-content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media screen and (max-width: 801px) {
+  .coffee-menu {
+    width: 100%;
+  }
+}/*# sourceMappingURL=CoffeMenu.css.map */

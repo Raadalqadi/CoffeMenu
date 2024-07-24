@@ -1,0 +1,64 @@
+@font-face {
+  font-family: 'El Messiri';
+  src: url('./assets/ElMessiri-VariableFont_wght.ttf');
+}
+:root{
+  --primery-color:#7e4226;
+  --secondry-color:#f2dfcc;
+  --background-color:#fdf5df;
+}
+
+body {
+  font-family: 'CustomFont', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "El Messiri", sans-serif;
+  font-weight: 400;
+  -webkit-tap-highlight-color: transparent;
+}
+
+::-webkit-scrollbar {
+  background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+}
+.show-to-up{
+  animation: UP 0.5s ease-out;
+}
+@keyframes UP {
+  0%{
+    opacity: 0;
+    transform: translateY(30%);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+
+  }
+}
+.show-out{
+  animation: Show 700ms ease;
+}
+
+@keyframes Show {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+
+    
+  }
+}

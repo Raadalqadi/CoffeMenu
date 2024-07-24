@@ -1,0 +1,28 @@
+.slide-show {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.slide-show-content {
+    display: flex;
+    overflow: hidden;
+    height: 100%;
+}
+
+.slide-show .img-content { 
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slide-show img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 1s ease-in-out;
+}
+
+

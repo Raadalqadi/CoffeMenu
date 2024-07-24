@@ -1,0 +1,29 @@
+header {
+    width: 100%;
+  
+    .top_head {
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      h2 {
+        text-align: center;
+        font-family: sans-serif;
+      }
+    }
+  
+    .ads-content {
+      width: 95%;
+      aspect-ratio: 16/5;
+      margin-inline: auto;
+      overflow: hidden;
+      border-radius: 10px;
+  
+      @media screen and (max-width: 801px) {
+        width: calc(100% - 20px);
+        aspect-ratio: 16/8;
+      }
+    }
+  }
+  

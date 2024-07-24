@@ -1,0 +1,217 @@
+.coffee-box {
+  margin: auto;
+  width: 100%;
+  display: flex;
+  border-radius: 7px;
+  overflow: hidden;
+  box-shadow: 0px 0px 3px 1px #ccc;
+  background: white;
+  transition: 800ms;
+}
+.big-box{
+  transform: scale(1.02 ,1);
+  transition: 800ms;
+}
+.coffee-box .img-content {
+  padding: 8px;
+  display: inline-block;
+  width: 150px;
+  overflow: hidden;
+}
+
+.coffee-box .img-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.coffee-box .coffee-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: calc(100% - 150px);
+  padding: 7px 10px;
+}
+
+.coffee-box .coffee-info .title .head {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.coffee-box .coffee-info .title h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.coffee-box .coffee-info .title button {
+  position: relative;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: normal;
+  background: white;
+  color: black;
+  border: none;
+  min-height: 30px;
+  width: auto;
+  padding-inline: 10px;
+  border-bottom: 1px solid var(--primery-color);
+  overflow: hidden;
+  transition: 300ms;
+}
+.coffee-box .coffee-info .title button span{
+  position: relative;
+  z-index: 1;
+}
+.coffee-box .coffee-info .title button:hover{
+  color: white;
+  border-radius: 5px;
+}
+.coffee-box .coffee-info .title button::after{
+  content: "";
+  position: absolute;
+  z-index: 0;
+  width: 0;
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 5px;
+  transition: 300ms;
+}
+.coffee-box .coffee-info .title button:hover::after{
+  width: 100%;
+  background: var(--primery-color);
+  color: white;
+}
+
+.coffee-box .coffee-info ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 5px 0;
+  padding-bottom: 8px;
+}
+
+.coffee-box .coffee-info ul li {
+  user-select: none;
+  font-weight: normal;
+  background: var(--secondry-color);
+  padding: 2px 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  color: black;
+  margin-inline-end: 7px;
+  margin-bottom: 3px;
+  cursor: pointer;
+  transition: 0.5s ease-out;
+}
+.coffee-box .coffee-info ul p {
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 600;
+  color: #5e5e5e;
+  display: flex;
+  align-items: center;
+}
+
+.coffee-box .coffee-info ul .active {
+  background: var(--primery-color);
+  color: white;
+}
+
+.coffee-box .coffee-info .description {
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.coffee-box .coffee-info .description p .show-desc{
+  color: #4f4f4f;
+  border-bottom: 1px solid #4f4f4f ;
+  cursor: pointer;
+  position: relative;
+  margin-inline-start: 12px;
+}
+.coffee-box .coffee-info .description p .show-desc::before{
+  content: " ...";
+  position: absolute;
+  right: -12px;
+}
+
+.coffee-box .coffee-info .price {
+  height: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: start;
+  font-size: 16px;
+}
+.coffee-box .coffee-info .price p{
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.coffee-box .coffee-info .price ul {
+  all: unset;
+  display: flex;
+  list-style: none;
+}
+
+.coffee-box .coffee-info .price ul li {
+  user-select: none;
+  margin: 0;
+  border-radius: 0;
+  background: #ed6d31;
+  color: white;
+}
+
+.coffee-box .coffee-info .price ul li:nth-of-type(2) {
+  background: #f7f7f7;
+  color: black;
+}
+.coffee-box .coffee-info .price ul li:nth-of-type(3) {
+  background: rgb(209, 156, 132);
+}
+
+@media screen and (max-width: 801px) {
+  .coffee-box .coffee-info .description {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .coffee-box .coffee-info .title h2 {
+    font-size: 16px;
+  }
+  
+  .coffee-box .coffee-info ul li {
+    font-size: 14px;
+  }
+  
+  .coffee-box .coffee-info .description {
+    font-size: 14px;
+  }
+  
+}
+@media screen and (max-width: 420px) {
+
+  .coffee-box .coffee-info .title h2 {
+    font-size: 14px;
+  }
+  
+  .coffee-box .coffee-info ul li {
+    font-size: 12px;
+  }
+  
+  .coffee-box .coffee-info .description {
+    font-size: 12px;
+  }
+  .coffee-box .coffee-info .title button{
+    font-size: 9px;
+
+  }
+}
+@media (hover:none) {
+  button:active{
+    background-color: initial;
+  }
+}
